@@ -1,10 +1,7 @@
 #PNEUMONIA PREDICTION USING X-RAY by Ayush Patel
-#Project ID:SPS_PRO_182
-
 
 #importing libraries
 from __future__ import division, print_function
-import sys
 import os
 import glob
 import numpy as np
@@ -14,18 +11,18 @@ from keras.models import load_model
 from keras import backend
 from tensorflow.keras import backend
 import tensorflow as tf
-global graph
-graph=tf.get_default_graph()
-from skimage.transform import resize
+#from skimage.transform import resize
 # Flask utilities
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 
+global graph
+graph=tf.get_default_graph()
 
 
 app = Flask(__name__)
 
-# importing model of x-ray prediction
+# importing x-ray prediction model
 MODEL_PATH = 'models/model.h5'
 
 # Loading trained model...
